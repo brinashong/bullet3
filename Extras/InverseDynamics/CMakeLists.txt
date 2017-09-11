@@ -23,9 +23,7 @@ target_include_directories(BulletInverseDynamicsUtils PUBLIC
 	$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${INCLUDE_INSTALL_DIR}>
 )
 
-IF (BUILD_SHARED_LIBS)
-	TARGET_LINK_LIBRARIES(BulletInverseDynamicsUtils BulletInverseDynamics BulletDynamics BulletCollision Bullet3Common LinearMath)
-ENDIF (BUILD_SHARED_LIBS)
+TARGET_LINK_LIBRARIES(BulletInverseDynamicsUtils BulletInverseDynamics BulletDynamics BulletCollision Bullet3Common LinearMath)
 
 IF (INSTALL_EXTRA_LIBS)
 	IF (NOT INTERNAL_CREATE_DISTRIBUTABLE_MSVC_PROJECTFILES)

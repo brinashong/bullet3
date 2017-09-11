@@ -15,9 +15,7 @@ target_include_directories(Bullet3Geometry PUBLIC
 	$<BUILD_INTERFACE:${BULLET_PHYSICS_SOURCE_DIR}/src>
 	$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${INCLUDE_INSTALL_DIR}>
 )
-if (BUILD_SHARED_LIBS)
-  target_link_libraries(Bullet3Geometry Bullet3Common)
-endif()
+target_link_libraries(Bullet3Geometry Bullet3Common)
 SET_TARGET_PROPERTIES(Bullet3Geometry PROPERTIES VERSION ${BULLET_VERSION})
 SET_TARGET_PROPERTIES(Bullet3Geometry PROPERTIES SOVERSION ${BULLET_VERSION})
 

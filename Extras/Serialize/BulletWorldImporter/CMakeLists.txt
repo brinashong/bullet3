@@ -16,9 +16,7 @@ target_include_directories(BulletWorldImporter PUBLIC
 	$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${INCLUDE_INSTALL_DIR}/BulletFileLoader>
 )
 
-IF (BUILD_SHARED_LIBS)
-	TARGET_LINK_LIBRARIES(BulletWorldImporter BulletDynamics BulletCollision BulletFileLoader LinearMath)
-ENDIF (BUILD_SHARED_LIBS)
+TARGET_LINK_LIBRARIES(BulletWorldImporter BulletDynamics BulletCollision BulletFileLoader LinearMath)
 
 IF (INSTALL_EXTRA_LIBS)
 	IF (NOT INTERNAL_CREATE_DISTRIBUTABLE_MSVC_PROJECTFILES)

@@ -34,9 +34,7 @@ target_include_directories(BulletInverseDynamics PUBLIC
 	$<BUILD_INTERFACE:${BULLET_PHYSICS_SOURCE_DIR}/src>
 	$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${INCLUDE_INSTALL_DIR}>
 )
-IF (BUILD_SHARED_LIBS)
-  TARGET_LINK_LIBRARIES(BulletInverseDynamics Bullet3Common LinearMath)
-ENDIF (BUILD_SHARED_LIBS)
+TARGET_LINK_LIBRARIES(BulletInverseDynamics Bullet3Common LinearMath)
 
 
 IF (INSTALL_LIBS)

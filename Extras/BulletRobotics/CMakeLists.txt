@@ -158,9 +158,7 @@ target_include_directories(BulletRobotics PUBLIC
 	$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${INCLUDE_INSTALL_DIR}>
 )
 
-IF (BUILD_SHARED_LIBS)
-	TARGET_LINK_LIBRARIES(BulletRobotics BulletInverseDynamicsUtils BulletWorldImporter BulletFileLoader BulletSoftBody BulletDynamics BulletCollision BulletInverseDynamics LinearMath Bullet3Common)
-ENDIF (BUILD_SHARED_LIBS)
+TARGET_LINK_LIBRARIES(BulletRobotics BulletInverseDynamicsUtils BulletWorldImporter BulletFileLoader BulletSoftBody BulletDynamics BulletCollision BulletInverseDynamics LinearMath Bullet3Common)
 
 IF (INSTALL_EXTRA_LIBS)
 	INSTALL(FILES
